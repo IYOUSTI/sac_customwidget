@@ -23,7 +23,16 @@
         fireChanged() {
             console.log("OnClick Triggered");     
             
-        }        
+        }     
+        
+        onCustomWidgetBeforeUpdate(changedProperties) {
+            this._props = { ...this._props, ...changedProperties };
+            }
+        onCustomWidgetAfterUpdate(changedProperties) {
+            if ("color" in changedProperties) {
+                this.style["background-color"] = changedProperties["color"];
+            }
+            }
         
     }
 

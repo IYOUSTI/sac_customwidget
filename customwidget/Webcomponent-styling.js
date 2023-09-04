@@ -22,19 +22,19 @@
     this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
     }
     _submit(e) {
-    e.preventDefault();
-    this.dispatchEvent(new CustomEvent("propertiesChanged", {
-        detail: {
-            properties: {
-                color: this.color
+        e.preventDefault();
+        this.dispatchEvent(new CustomEvent("propertiesChanged", {
+            detail: {
+                properties: {
+                    color: this.color
+            }
         }
+        }));
     }
-    }));
-    }
-    setColor(newColor) {
+    set color(newColor) {
     this._shadowRoot.getElementById("styling_color").value = newColor;
     }
-    getColor() {
+    get color() {
     return this._shadowRoot.getElementById("styling_color").value;
     }
     }

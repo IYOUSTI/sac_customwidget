@@ -42,7 +42,7 @@
 		}
 	},
 	"methods": {
-		"setColorm": {
+		"setColor": {
 		"description": "Sets the background color.",
 		"parameters": [
 		{
@@ -53,7 +53,7 @@
 		],
 		"body": "this.color = newColor;"
 		},
-		"getColorm": {
+		"getColor": {
 		"returnType": "string",
 		"description": "Returns the background color.",
 		"body": "return this.color;"
