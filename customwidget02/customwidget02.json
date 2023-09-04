@@ -1,0 +1,67 @@
+{
+	"name": "customwidget_02",
+	"description": "A pyramidal visualisation type that portrays absolute and relative differences.",
+	"newInstancePrefix": "customwidget_02",
+	"eula": "",
+	"vendor": "IYOUSTI",
+	"license": "",
+	"id": "mycustomwidget_02",
+	"version": "1.0.0",
+	"icon": "https://iyousti.github.io/sac_customwidget/customwidget02/icon.png",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "pyramid-graph",
+			"url": "https://iyousti.github.io/sac_customwidget/customwidget02/Webcomponent.js",
+			"integrity": ""	,
+			"ignoreIntegrity": true
+			
+		},
+		{
+			"kind": "styling",
+			"tag": "pyramid-graph-styling",
+			"url": "https://iyousti.github.io/sac_customwidget/customwidget02/Webcomponent-styling.js",
+			"integrity": ""	,
+			"ignoreIntegrity": true
+			
+		},
+		{
+			"kind": "builder",
+			"tag": "pyramid-graph-builder",
+			"url": "https://iyousti.github.io/sac_customwidget/customwidget02/Webcomponent-builder.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}	
+	],
+	"properties": {
+		"width": {
+			"type": "integer",
+			"default": 500
+		},
+		"height": {
+			"type": "integer",
+			"default": 500
+		},
+		"dataBindings": {
+			"myDataBinding": {
+			  "feeds": [
+				{
+				  "id": "dimensions",
+				  "description": "Dimensions",
+				  "type": "dimension"
+				},
+				{
+				  "id": "measures",
+				  "description": "Measures",
+				  "type": "mainStructureMember"
+				}
+			  ]
+			}
+		  }
+	},
+	"methods": {
+	}
+	,
+	"events": {
+	}
+}
