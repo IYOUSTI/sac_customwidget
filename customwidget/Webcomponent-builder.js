@@ -27,13 +27,6 @@
     this._shadowRoot.appendChild(template.content.cloneNode(true));
     this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
     }
-    
-    set opacity(newOpacity) {
-    this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
-    }
-    get opacity() {
-    return this._shadowRoot.getElementById("builder_opacity").value;
-    }
 
     _submit(e) {
         e.preventDefault();
@@ -45,7 +38,12 @@
         }
         }));
         }
-
-    }
+        set opacity(newOpacity) {
+        this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
+        }
+        get opacity() {
+        return this._shadowRoot.getElementById("builder_opacity").value;
+        }
+        }
     customElements.define("custom-button-builder", CustomBoxBuilderPanel);
     })();
