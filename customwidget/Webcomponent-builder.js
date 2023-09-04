@@ -47,5 +47,5 @@
         }
 
     }
-    customElements.define("custom-button-styling", CustomBoxBuilderPanel);
+    customElements.define("custom-button-builder", CustomBoxBuilderPanel);
     })();
