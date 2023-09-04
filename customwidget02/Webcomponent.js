@@ -9,11 +9,25 @@
             this.init();           
         }
 
-        init() {            
-              
+        init() {               
             let shadowRoot = this.attachShadow({mode: "open"});
-            shadowRoot.appendChild(tmpl.content.cloneNode(true));          
-        }
+            shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this.addEventListener("click", event => {
+                var event = new Event("onClick");
+                this.fireChanged();           
+                this.dispatchEvent(event);
+                });           
+            }
+            
+    
+            fireChanged() {
+                console.log("OnClick Triggered");
+                this.myDataBinding.data.forEach(row => {
+                    console.log("row")
+                    console.log(row)
+                  })
+            }              
+        
         
     }
 
