@@ -41,27 +41,27 @@
 		"height": {
 			"type": "integer",
 			"default": 500
-		},
-		"dataBindings": {
-			"myDataBinding": {
-			  "feeds": [
-				{
-				  "id": "dimensions",
-				  "description": "Dimensions",
-				  "type": "dimension"
-				},
-				{
-				  "id": "measures",
-				  "description": "Measures",
-				  "type": "mainStructureMember"
-				}
-			  ]
-			}
-		  }
+		}
 	},
 	"methods": {
 	}
 	,
 	"events": {
-	}
+	},
+	"dataBindings": {
+		"myDataBinding": {
+		  "feeds": [
+			{
+			  "id": "dimensions",
+			  "description": "Dimensions",
+			  "type": "dimension"
+			},
+			{
+			  "id": "measures",
+			  "description": "Measures",
+			  "type": "mainStructureMember"
+			}
+		  ]
+		}
+	  }
 }
