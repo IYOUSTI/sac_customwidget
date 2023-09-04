@@ -5,7 +5,7 @@
 	"eula": "",
 	"vendor": "IYOUSTI",
 	"license": "",
-	"id": "mycustomwidget",
+	"id": "mycustomwidget_01",
 	"version": "1.0.0",
 	"icon": "https://iyousti.github.io/sac_customwidget/customwidget/icon.png",
 	"webcomponents": [
