@@ -21,8 +21,7 @@
         }
 
         fireChanged() {
-            console.log("OnClick Triggered");     
-            
+            console.log("OnClick Triggered");
         }     
         
         onCustomWidgetBeforeUpdate(changedProperties) {
