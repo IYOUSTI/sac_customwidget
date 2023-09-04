@@ -34,6 +34,11 @@
 		"height": {
 			"type": "integer",
 			"default": 32
+		},
+		"color": {
+			"type": "string",
+			"description": "Background color",
+			"default": "red"
 		}
 	},
 	"methods": {
