@@ -24,7 +24,14 @@
 			"integrity": ""	,
 			"ignoreIntegrity": true
 			
-		}		
+		},
+		{
+			"kind": "builder",
+			"tag": "custom-button-builder",
+			"url": "https://iyousti.github.io/sac_customwidget/customwidget/Webcomponent-builder.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}	
 	],
 	"properties": {
 		"width": {
@@ -35,6 +42,11 @@
 			"type": "integer",
 			"default": 32
 		},
+		"opacity": {
+			"type": "number",
+			"description": "Opacity",
+			"default": 1
+			},
 		"color": {
 			"type": "string",
 			"description": "Background color",

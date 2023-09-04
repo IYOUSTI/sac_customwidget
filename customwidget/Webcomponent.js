@@ -31,6 +31,9 @@
             if ("color" in changedProperties) {
                 this.style["background-color"] = changedProperties["color"];
             }
+            if ("opacity" in changedProperties) {
+                this.style["opacity"] = changedProperties["opacity"];
+            }
             }
         
     }
