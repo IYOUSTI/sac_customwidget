@@ -1,18 +1,26 @@
 {
-	"name": "mycustomwidget",
+	"name": "customwidget_01",
 	"description": "Hello World",
-	"newInstancePrefix": "mycustomwidget",
+	"newInstancePrefix": "customwidget_01",
 	"eula": "",
-	"vendor": "PranavKandpal",
+	"vendor": "IYOUSTI",
 	"license": "",
 	"id": "mycustomwidget",
-	"version": "1.0.1",
-	"icon": "",
+	"version": "1.0.0",
+	"icon": "https://iyousti.github.io/sac_customwidget/customwidget/icon.png",
 	"webcomponents": [
 		{
 			"kind": "main",
 			"tag": "custom-button",
 			"url": "https://iyousti.github.io/sac_customwidget/customwidget/Webcomponent.js",
+			"integrity": ""	,
+			"ignoreIntegrity": true
+			
+		},
+		{
+			"kind": "styling",
+			"tag": "custom-button-styling",
+			"url": "https://iyousti.github.io/sac_customwidget/customwidget/Webcomponent-styling.js",
 			"integrity": ""	,
 			"ignoreIntegrity": true
 			
