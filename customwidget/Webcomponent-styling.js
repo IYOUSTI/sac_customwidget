@@ -24,17 +24,17 @@
     _submit(e) {
     e.preventDefault();
     this.dispatchEvent(new CustomEvent("propertiesChanged", {
-    detail: {
-    properties: {
-    color: this.color
-    }
+        detail: {
+            properties: {
+                color: this.color
+        }
     }
     }));
     }
-    set color(newColor) {
+    setColor(newColor) {
     this._shadowRoot.getElementById("styling_color").value = newColor;
     }
-    get color() {
+    getColor() {
     return this._shadowRoot.getElementById("styling_color").value;
     }
     }
