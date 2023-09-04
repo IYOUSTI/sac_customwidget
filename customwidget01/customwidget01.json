@@ -7,12 +7,12 @@
 	"license": "",
 	"id": "mycustomwidget_01",
 	"version": "1.0.0",
-	"icon": "https://iyousti.github.io/sac_customwidget/customwidget/icon.png",
+	"icon": "https://iyousti.github.io/sac_customwidget/customwidget01/icon.png",
 	"webcomponents": [
 		{
 			"kind": "main",
 			"tag": "custom-button",
-			"url": "https://iyousti.github.io/sac_customwidget/customwidget/Webcomponent.js",
+			"url": "https://iyousti.github.io/sac_customwidget/customwidget01/Webcomponent.js",
 			"integrity": ""	,
 			"ignoreIntegrity": true
 			
@@ -20,7 +20,7 @@
 		{
 			"kind": "styling",
 			"tag": "custom-button-styling",
-			"url": "https://iyousti.github.io/sac_customwidget/customwidget/Webcomponent-styling.js",
+			"url": "https://iyousti.github.io/sac_customwidget/customwidget01/Webcomponent-styling.js",
 			"integrity": ""	,
 			"ignoreIntegrity": true
 			
@@ -28,7 +28,7 @@
 		{
 			"kind": "builder",
 			"tag": "custom-button-builder",
-			"url": "https://iyousti.github.io/sac_customwidget/customwidget/Webcomponent-builder.js",
+			"url": "https://iyousti.github.io/sac_customwidget/customwidget01/Webcomponent-builder.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}	
