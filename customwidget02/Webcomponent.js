@@ -91,8 +91,8 @@
                 console.log(this.shadowRoot);
                 const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
                 this.AppendText(geplaatste_meters, 'bar-1');
-                console.log(value_bar1);
                 const value_bar1 = this.CalculatePercentageDifferenceAndValue(geplaatste_meters,geplaatste_meters,geplaatste_meters);
+                console.log(value_bar1);
                 this.ApplyWidth(value_bar1.percentagePF, 'bar-1');
 
                 const meteradd_meters = this.myDataBinding.data[0]["measures_1"].raw;
