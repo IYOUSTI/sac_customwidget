@@ -88,7 +88,7 @@
     
             fireChanged() {
                 console.log("OnClick Triggered");
-                console.log(tmpl);
+                console.log(this.shadowRoot);
                 const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
                 this.AppendText(geplaatste_meters, 'bar-1');
                 const meteradd_meters = this.myDataBinding.data[0]["measures_1"].raw;
@@ -103,15 +103,15 @@
             }
             
             AppendText(text, elementId) {
-                const targetElement = tmpl.getElementById(elementId);
+                const targetElement = this.shadowRoot.getElementById(elementId);
             
                 if (targetElement) {
-                    const textNode = tmpl.createTextNode(text);
-                    targetElement.appendChild(textNode);
+                    targetElement.textContent = text;
                 } else {
                     console.error(`Element with ID "${elementId}" not found.`);
                 }
             }
+            
         
         
     }
