@@ -144,9 +144,7 @@
         init() {               
             let shadowRoot = this.attachShadow({mode: "open"});
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.addEventListener("load", event => {
-                this.RenderChart();           
-                });           
+            this.addEventListener("load", this.RenderChart());         
             }
             
     
