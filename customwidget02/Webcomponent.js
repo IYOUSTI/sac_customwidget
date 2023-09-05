@@ -102,10 +102,10 @@
             }
             
             AppendText(text, elementId) {
-                const targetElement = document.getElementById(elementId);
+                const targetElement = this._shadowRoot.getElementById(elementId);
             
                 if (targetElement) {
-                    const textNode = document.createTextNode(text);
+                    const textNode = this._shadowRoot.createTextNode(text);
                     targetElement.appendChild(textNode);
                 } else {
                     console.error(`Element with ID "${elementId}" not found.`);
