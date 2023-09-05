@@ -92,10 +92,15 @@
                 const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
                 this.AppendText(geplaatste_meters, 'bar-1');
                 const meteradd_meters = this.myDataBinding.data[0]["measures_1"].raw;
+                this.AppendText(meteradd_meters, 'bar-2');
                 const capability_meters = this.myDataBinding.data[0]["measures_2"].raw;
+                this.AppendText(capability_meters, 'bar-3');
                 const positivecapability_meters = this.myDataBinding.data[0]["measures_3"].raw;
+                this.AppendText(positivecapability_meters, 'bar-4');
                 const meterstanden_hes = this.myDataBinding.data[0]["measures_4"].raw;
+                this.AppendText(meterstanden_hes, 'bar-5');
                 const meterstanden_c4e = this.myDataBinding.data[0]["measures_5"].raw;
+                this.AppendText(meterstanden_c4e, 'bar-6');
                 this.myDataBinding.data.forEach(row => {
                     console.log("row")
                     console.log(row)
@@ -106,7 +111,7 @@
                 const targetElement = this.shadowRoot.getElementById(elementId);
             
                 if (targetElement) {
-                    targetElement.textContent = text;
+                    targetElement.textContent = '<div class="label">'+ text +'</div>';
                 } else {
                     console.error(`Element with ID "${elementId}" not found.`);
                 }
