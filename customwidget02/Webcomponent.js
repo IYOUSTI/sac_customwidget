@@ -150,7 +150,6 @@
             
     
             RenderChart() {
-                console.log("OnClick Triggered");
                 const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
                 const value_bar1 = this.CalculatePercentageDifferenceAndValue(geplaatste_meters,geplaatste_meters,geplaatste_meters);
                 this.AppendText(`${geplaatste_meters} (${value_bar1.percentageDifferencePC}%)`, 'bar-1');
