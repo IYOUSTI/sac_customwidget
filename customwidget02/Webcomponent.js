@@ -88,7 +88,9 @@
     
             fireChanged() {
                 console.log("OnClick Triggered");
-                console.log(this.myDataBinding)
+                const geplaatste_meters = this.myDataBinding.data[0]["measures_0"];
+                console.log(geplaatste_meters);
+                console.log(geplaatste_meters.raw);
                 this.myDataBinding.data.forEach(row => {
                     console.log("row")
                     console.log(row)
