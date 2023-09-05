@@ -88,7 +88,7 @@
     
             fireChanged() {
                 console.log("OnClick Triggered");
-                console.log(myDataBinding.data)
+                console.log(myDataBinding)
                 this.myDataBinding.data.forEach(row => {
                     console.log("row")
                     console.log(row)
