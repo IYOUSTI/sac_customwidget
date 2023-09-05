@@ -91,16 +91,33 @@
                 console.log(this.shadowRoot);
                 const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
                 this.AppendText(geplaatste_meters, 'bar-1');
+                const value_bar1 = this.CalculatePercentageDifferenceAndValue(geplaatste_meters,geplaatste_meters,geplaatste_meters);
+                this.ApplyWidth(value_bar1.percentagePF, 'bar-1');
+
                 const meteradd_meters = this.myDataBinding.data[0]["measures_1"].raw;
                 this.AppendText(meteradd_meters, 'bar-2');
+                const value_bar2 = this.CalculatePercentageDifferenceAndValue(geplaatste_meters,meteradd_meters,geplaatste_meters);
+                this.ApplyWidth(value_bar2.percentagePF, 'bar-2');
+
                 const capability_meters = this.myDataBinding.data[0]["measures_2"].raw;
                 this.AppendText(capability_meters, 'bar-3');
+                const value_bar3 = this.CalculatePercentageDifferenceAndValue(meteradd_meters,capability_meters,geplaatste_meters);
+                this.ApplyWidth(value_bar3.percentagePF, 'bar-3');
                 const positivecapability_meters = this.myDataBinding.data[0]["measures_3"].raw;
                 this.AppendText(positivecapability_meters, 'bar-4');
+                const value_bar4 = this.CalculatePercentageDifferenceAndValue(capability_meters,positivecapability_meters,geplaatste_meters);
+                this.ApplyWidth(value_bar4.percentagePF, 'bar-4');
+
                 const meterstanden_hes = this.myDataBinding.data[0]["measures_4"].raw;
                 this.AppendText(meterstanden_hes, 'bar-5');
+                const value_bar5 = this.CalculatePercentageDifferenceAndValue(positivecapability_meters,meterstanden_hes,geplaatste_meters);
+                this.ApplyWidth(value_bar5.percentagePF, 'bar-5');
+
                 const meterstanden_c4e = this.myDataBinding.data[0]["measures_5"].raw;
                 this.AppendText(meterstanden_c4e, 'bar-6');
+                const value_bar6 = this.CalculatePercentageDifferenceAndValue(meterstanden_hes,meterstanden_c4e,geplaatste_meters);
+                this.ApplyWidth(value_bar6.percentagePF, 'bar-6');
+
                 this.myDataBinding.data.forEach(row => {
                     console.log("row")
                     console.log(row)
@@ -116,6 +133,30 @@
                     console.error(`Element with ID "${elementId}" not found.`);
                 }
             }
+
+            CalculatePercentageDifferenceAndValue(previousvalue, currentvalue, firstvalue) {
+                // Calculate the percentage difference between a and b
+                const percentageDifferencePC = ((previousvalue - currentvalue) / Math.abs(currentvalue)) * 100;
+              
+                // Calculate the value between a and c
+                const valueBetweenPF = ((firstvalue - currentvalue) / Math.abs(currentvalue)) * 100;
+              
+                // Return both results in an object
+                return {
+                  percentageDifferenceAB,
+                  percentagePF,
+                };
+              }
+              
+              ApplyWidth(amount, elementid) {
+                const targetElement = this.shadowRoot.getElementById(elementId);
+                if (targetElement) {
+                    targetElement.style.width = `${newValue}%`;
+                } else {
+                    console.error(`Element with ID "${elementId}" not found.`);
+                }
+              }
+              
             
         
         
