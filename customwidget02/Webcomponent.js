@@ -88,7 +88,6 @@
     
             fireChanged() {
                 console.log("OnClick Triggered");
-                console.log(this.shadowRoot);
                 const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
                 const value_bar1 = this.CalculatePercentageDifferenceAndValue(geplaatste_meters,geplaatste_meters,geplaatste_meters);
                 this.AppendText(`${geplaatste_meters} (${value_bar1.percentageDifferencePC}%)`, 'bar-1');
@@ -118,13 +117,7 @@
                 const value_bar6 = this.CalculatePercentageDifferenceAndValue(meterstanden_hes,meterstanden_c4e,geplaatste_meters);
                 this.AppendText(`${meterstanden_c4e} (${value_bar6.percentageDifferencePC}%)`, 'bar-6');
                 this.ApplyWidth(value_bar6.percentageFC, 'bar-6');
-                console.log('test');
-                console.log(`${meterstanden_c4e} (${value_bar6.percentageDifferencePC}%), ${meterstanden_hes},${meterstanden_c4e},${geplaatste_meters}`)
 
-                this.myDataBinding.data.forEach(row => {
-                    console.log("row")
-                    console.log(row)
-                  })
             }
             
             AppendText(text, elementId) {
@@ -138,8 +131,8 @@
             }
 
             CalculatePercentageDifferenceAndValue(previousvalue, currentvalue, firstvalue) {
-                const percentageDifferencePC = (100 - (((previousvalue - currentvalue) / Math.abs(currentvalue)) * 100)).toFixed(2);;
-                const percentageFC = (100 - (((firstvalue - currentvalue) / Math.abs(currentvalue)) * 100)).toFixed(2);;
+                const percentageDifferencePC = 100 - (((previousvalue - currentvalue) / Math.abs(currentvalue)) * 100).toFixed(2);
+                const percentageFC = 100 - (((firstvalue - currentvalue) / Math.abs(currentvalue)) * 100).toFixed(2);
               
                 // Return both results in an object
                 return {
