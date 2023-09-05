@@ -145,7 +145,11 @@
         init() {               
             let shadowRoot = this.attachShadow({mode: "open"});
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.RenderChart();           
+            if (this._ready) {
+                this.RenderChart(); 
+            } else {
+                console.log('not ready');
+            }
             }
             
     
