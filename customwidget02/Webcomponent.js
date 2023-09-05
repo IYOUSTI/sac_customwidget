@@ -118,6 +118,8 @@
                 const value_bar6 = this.CalculatePercentageDifferenceAndValue(meterstanden_hes,meterstanden_c4e,geplaatste_meters);
                 this.AppendText(`${meterstanden_c4e} (${value_bar6.percentageDifferencePC}%)`, 'bar-6');
                 this.ApplyWidth(value_bar6.percentageFC, 'bar-6');
+                console.log('test');
+                console.log(`${meterstanden_c4e} (${value_bar6.percentageDifferencePC}%), ${meterstanden_hes},${meterstanden_c4e},${geplaatste_meters}`)
 
                 this.myDataBinding.data.forEach(row => {
                     console.log("row")
