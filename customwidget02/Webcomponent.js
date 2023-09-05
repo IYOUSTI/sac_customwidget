@@ -140,7 +140,7 @@
                 const percentageDifferencePC = ((previousvalue - currentvalue) / Math.abs(currentvalue)) * 100;
               
                 // Calculate the value between a and c
-                const percentagePF = ((firstvalue - currentvalue) / Math.abs(currentvalue)) * 100;
+                const percentagePF = 100 - (((firstvalue - currentvalue) / Math.abs(currentvalue)) * 100);
               
                 // Return both results in an object
                 return {
