@@ -136,11 +136,8 @@
             }
 
             CalculatePercentageDifferenceAndValue(previousvalue, currentvalue, firstvalue) {
-                // Calculate the percentage difference between a and b
-                const percentageDifferencePC = 100 - (((previousvalue - currentvalue) / Math.abs(currentvalue)) * 100);
-              
-                // Calculate the value between a and c
-                const percentageFC = 100 - (((firstvalue - currentvalue) / Math.abs(currentvalue)) * 100);
+                const percentageDifferencePC = (100 - (((previousvalue - currentvalue) / Math.abs(currentvalue)) * 100)).toFixed(2);;
+                const percentageFC = (100 - (((firstvalue - currentvalue) / Math.abs(currentvalue)) * 100)).toFixed(2);;
               
                 // Return both results in an object
                 return {
@@ -157,10 +154,6 @@
                     console.error(`Element with ID "${elementId}" not found.`);
                 }
               }
-              
-            
-        
-        
     }
 
     customElements.define('pyramid-graph', PerformanceHelp);
