@@ -3,32 +3,84 @@
     tmpl.innerHTML = 
     `
     <head>
-    <title>Horizontal Bar Chart</title>
     <style>
-    /* CSS styles here */
+    @import url("https://fonts.googleapis.com/css2? family=Montserrat&display=swap");
+      
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+      
+      .widget-container {
+        border: 1px red solid;
+        width: 100vw;
+        height:100vh;
+      }
+  
+      h2 {
+        text-decoration: underline;
+  margin-bottom:1vh;
+  text-align: center;
+  height: 10vh;
+  width: 100vw;
+  transform: translateY(5vh);
+        color: #5A5A5A;
+}
+      
+      .container-barchart {
+        display:flex;
+        flex-direction: row;
+      }
+      
+      .measures-label{
+        width:20vw;
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 84vh;
+      }
+      
+      .measures-label li {
+        list-style: none;
+        color: #5A5A5A;
+        height: 10vh;
+        margin: 1vh;
+        width: 80%;
+        text-align: right;
+      }
+      
     .horizontal-barchart {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-    }
-
-    .label {
-      background-color: #5A5A5A;
-      height: 100%;
-      width: 10%;
-      text-align: center;
-      margin: auto;
-      padding: 2px 6px;
-      color: white;
-      border-radius: 4px;
-      height: 30%;
+      height: 84vh;
+      width: 75vw;
+      padding-left: 2.5vw;
+      padding-right: 2.5vw;
     }
 
     .horizontal-barchart .bar {
       background: #0DA58E;
-      height: 80px;
-      margin: 10px;
+      height: 10vh;
+      margin: 1vh;
+      border-radius: 40px;
+    }
+      
+        .label {
+      background-color: #5A5A5A;
+          margin-top: 1vh;
+          margin-bottom: 1vh;
+      height: 8vh;
+      width: 20%;
+      text-align: center;
+      padding: 2vh 1vw;
+      color: #ccc;
+      border-radius: 20px;
+          margin:auto;
     }
     </style>
     </head>
@@ -37,9 +89,24 @@
         <h2>Overzicht datameterketting</h2>
 
         <br />
-
-        <div class="horizontal-barchart">
-
+        
+        <div class="container-barchart">
+        <div class="measures-label">
+      <li> Geplaatste meters
+          </li>
+          <li> MeterAdd meters
+          </li>
+          <li> Capability meters
+          </li>
+          <li> Positive capability meters
+          </li>
+          <li> Meterstanden dagelijks in HES
+          </li>
+          <li> Meterstanden dagelijks in C4E
+          </li>
+      </div>
+          <div class="horizontal-barchart">
+      
         <div class="bar" id="bar-1" style="width: 100%">
             <div class="label"></div>
         </div>
@@ -63,7 +130,7 @@
         <div class="bar" id="bar-6" style="width: 59%">
             <div class="label"></div>
         </div>
-
+        </div>
         </div>
     </div>
     </body>
