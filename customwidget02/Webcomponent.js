@@ -40,27 +40,27 @@
 
         <div class="horizontal-barchart">
 
-        <div class="bar" style="width: 100%">
-            <div class="label">70912</div>
+        <div class="bar" id="bar-1" style="width: 100%">
+            <div class="label"></div>
         </div>
 
-        <div class="bar" style="width: 75%">
+        <div class="bar" id="bar-2" style="width: 75%">
             <div class="label">68652</div>
         </div>
 
-        <div class="bar" style="width: 71%">
+        <div class="bar" id="bar-3" style="width: 71%">
             <div class="label">68626</div>
         </div>
 
-        <div class="bar" style="width: 65%">
+        <div class="bar" id="bar-4" style="width: 65%">
             <div class="label">68174</div>
         </div>
 
-        <div class="bar" style="width: 65%">
+        <div class="bar" id="bar-5" style="width: 65%">
             <div class="label">68174</div>
         </div>
 
-        <div class="bar" style="width: 59%">
+        <div class="bar" id="bar-6" style="width: 59%">
             <div class="label">62266</div>
         </div>
 
@@ -88,14 +88,29 @@
     
             fireChanged() {
                 console.log("OnClick Triggered");
-                const geplaatste_meters = this.myDataBinding.data[0]["measures_0"];
-                console.log(geplaatste_meters);
-                console.log(geplaatste_meters.raw);
+                const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
+                this.AppendText(geplaatste_meters, 'bar-1');
+                const meteradd_meters = this.myDataBinding.data[0]["measures_1"].raw;
+                const capability_meters = this.myDataBinding.data[0]["measures_2"].raw;
+                const positivecapability_meters = this.myDataBinding.data[0]["measures_3"].raw;
+                const meterstanden_hes = this.myDataBinding.data[0]["measures_4"].raw;
+                const meterstanden_c4e = this.myDataBinding.data[0]["measures_5"].raw;
                 this.myDataBinding.data.forEach(row => {
                     console.log("row")
                     console.log(row)
                   })
-            }              
+            }
+            
+            AppendText(text, elementId) {
+                const targetElement = document.getElementById(elementId);
+            
+                if (targetElement) {
+                    const textNode = document.createTextNode(text);
+                    targetElement.appendChild(textNode);
+                } else {
+                    console.error(`Element with ID "${elementId}" not found.`);
+                }
+            }
         
         
     }
