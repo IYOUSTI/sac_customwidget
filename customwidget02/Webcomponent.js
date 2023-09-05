@@ -143,8 +143,8 @@
               
                 // Return both results in an object
                 return {
-                  percentageDifferenceAB,
-                  percentagePF,
+                    percentageDifferencePC,
+                    percentagePF,
                 };
               }
               
