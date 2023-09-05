@@ -14,7 +14,6 @@
 }
       
       .widget-container {
-        border: 1px red solid;
         width: 100vw;
         height:100vh;
       }
@@ -145,11 +144,11 @@
         init() {               
             let shadowRoot = this.attachShadow({mode: "open"});
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            if (this._ready) {
-                this.RenderChart(); 
-            } else {
-                console.log('not ready');
-            }
+            this.addEventListener("click", event => {
+                var event = new Event("onClick");
+                this.RenderChart();           
+                this.dispatchEvent(event);
+                });           
             }
             
     
