@@ -88,6 +88,7 @@
     
             fireChanged() {
                 console.log("OnClick Triggered");
+                console.log(tmpl);
                 const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
                 this.AppendText(geplaatste_meters, 'bar-1');
                 const meteradd_meters = this.myDataBinding.data[0]["measures_1"].raw;
@@ -102,10 +103,10 @@
             }
             
             AppendText(text, elementId) {
-                const targetElement = shadowRoot.getElementById(elementId);
+                const targetElement = tmpl.getElementById(elementId);
             
                 if (targetElement) {
-                    const textNode = shadowRoot.createTextNode(text);
+                    const textNode = tmpl.createTextNode(text);
                     targetElement.appendChild(textNode);
                 } else {
                     console.error(`Element with ID "${elementId}" not found.`);
