@@ -45,23 +45,23 @@
         </div>
 
         <div class="bar" id="bar-2" style="width: 75%">
-            <div class="label">68652</div>
+            <div class="label"></div>
         </div>
 
         <div class="bar" id="bar-3" style="width: 71%">
-            <div class="label">68626</div>
+            <div class="label"></div>
         </div>
 
         <div class="bar" id="bar-4" style="width: 65%">
-            <div class="label">68174</div>
+            <div class="label"></div>
         </div>
 
         <div class="bar" id="bar-5" style="width: 65%">
-            <div class="label">68174</div>
+            <div class="label"></div>
         </div>
 
         <div class="bar" id="bar-6" style="width: 59%">
-            <div class="label">62266</div>
+            <div class="label"></div>
         </div>
 
         </div>
@@ -111,7 +111,7 @@
                 const targetElement = this.shadowRoot.getElementById(elementId);
             
                 if (targetElement) {
-                    targetElement.textContent = '<div class="label">'+ text +'</div>';
+                    targetElement.innerHTML = '<div class="label">'+ text +'</div>';
                 } else {
                     console.error(`Element with ID "${elementId}" not found.`);
                 }
