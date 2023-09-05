@@ -78,15 +78,11 @@
         init() {               
             let shadowRoot = this.attachShadow({mode: "open"});
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.fireChanged();           
-                this.dispatchEvent(event);
-                });           
+            this.RenderChart();           
             }
             
     
-            fireChanged() {
+            RenderChart() {
                 console.log("OnClick Triggered");
                 const geplaatste_meters = this.myDataBinding.data[0]["measures_0"].raw;
                 const value_bar1 = this.CalculatePercentageDifferenceAndValue(geplaatste_meters,geplaatste_meters,geplaatste_meters);
